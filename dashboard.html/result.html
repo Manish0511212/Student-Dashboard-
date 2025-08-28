@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - Student Dashboard</title>
+    <link rel="stylesheet" href="script.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div>
+            <h2>🎓</h2>
+            <div class="menu">
+                <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="payment.html"><i class="fas fa-credit-card"></i> Payment Info</a>
+                <a href="registration.html"><i class="fas fa-file-alt"></i> Registration</a>
+                <a href="courses.html" class="active"><i class="fas fa-book"></i> Courses</a>
+                <a href="drop.html"><i class="fas fa-times-circle"></i> Drop Semester</a>
+                <a href="result.html"><i class="fas fa-poll"></i> Result</a>
+                <a href="notice.html"><i class="fas fa-bell"></i> Notice</a>
+                <a href="schedule.html"><i class="fas fa-calendar"></i> Schedule</a>
+            </div>
+        </div>
+        <div class="logout">
+            <a href="login.html" style="color:white;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="search"><input type="text" placeholder="Search results..."></div>
+            <div class="user">
+                <span>Manish Kumar</span>
+                <img src="https://img.icons8.com/color/96/user-male-circle--v1.png" style="width:70px; height:70px;" alt="user">
+            </div>
+        </div>
+
+        <!-- Result Heading -->
+        <div class="welcome">
+            <div>
+                <h2>Academic Results</h2>
+                <p>Check your grades for the current semester</p>
+            </div>
+            <img src="https://img.icons8.com/color/96/report-card.png" alt="Results">
+        </div>
+
+        <!-- Result Table -->
+        <div class="result-section">
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Midterm</th>
+                        <th>Final</th>
+                        <th>Grade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSE201</td>
+                        <td>Object Oriented Programming</td>
+                        <td>85</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td><span class="status pass">Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>CSE202</td>
+                        <td>Database Systems</td>
+                        <td>78</td>
+                        <td>82</td>
+                        <td>B+</td>
+                        <td><span class="status pass">Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>CSE301</td>
+                        <td>Software Engineering</td>
+                        <td>88</td>
+                        <td>91</td>
+                        <td>A</td>
+                        <td><span class="status pass">Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>CSE302</td>
+                        <td>Computer Networks</td>
+                        <td>70</td>
+                        <td>75</td>
+                        <td>B</td>
+                        <td><span class="status pass">Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>CSE303</td>
+                        <td>Operating Systems</td>
+                        <td>92</td>
+                        <td>95</td>
+                        <td>A+</td>
+                        <td><span class="status pass">Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>CSE304</td>
+                        <td>Artificial Intelligence</td>
+                        <td>65</td>
+                        <td>60</td>
+                        <td>C</td>
+                        <td><span class="status fail">Fail</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

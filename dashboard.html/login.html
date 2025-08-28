@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - User Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-purple-200 to-purple-100 min-h-screen flex items-center justify-center">
+
+    <!-- Login Card -->
+    <div class="bg-white p-10 rounded-2xl shadow-xl w-full max-w-md">
+        <h1 class="text-3xl font-bold text-purple-700 text-center mb-6">Login</h1>
+
+        <!-- Form -->
+        <form id="loginForm" class="space-y-5">
+            <!-- Username -->
+            <div>
+                <label for="username" class="block text-purple-800 font-semibold mb-1">User ID</label>
+                <input type="text" id="username" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none" placeholder="Enter User ID">
+            </div>
+
+            <!-- Password -->
+            <div>
+                <label for="password" class="block text-purple-800 font-semibold mb-1">Password</label>
+                <input type="password" id="password" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none" placeholder="Enter Password">
+            </div>
+
+            <!-- Button -->
+            <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition">
+                Login
+            </button>
+        </form>
+
+        <!-- Error message (no longer used) -->
+        <p id="errorMsg" class="text-red-600 mt-4 text-center hidden">Invalid credentials, please try again!</p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            if (username === "manish kumar" && password === "12345") {
+                window.location.href = "page.html"; // success → go to page.html
+            } else {
+                document.getElementById("errorMsg").classList.remove("hidden"); // show error message
+            }
+        });
+    </script>
+
+</body>
+
+</html>
