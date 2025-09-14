@@ -1,0 +1,716 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: #4B0082;
+    /* Dark Purple */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.sidebar .menu a {
+    display: flex;
+    /* Use flex for icon and text alignment */
+    align-items: center;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+    margin: 5px 10px;
+    /* Add some margin around links */
+    border-radius: 8px;
+    /* Rounded corners for menu items */
+}
+
+.sidebar .menu a i {
+    margin-right: 10px;
+    /* Space between icon and text */
+    font-size: 18px;
+}
+
+.sidebar .menu a:hover,
+.sidebar .menu a.active {
+    background: #6A0DAD;
+    /* Lighter Purple */
+    color: #fff;
+}
+
+.sidebar .logout {
+    margin: 20px;
+    text-align: center;
+}
+
+.sidebar .logout a {
+    display: block;
+    padding: 10px 15px;
+    background: #8A2BE2;
+    /* Blue Violet */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.sidebar .logout a:hover {
+    background: #9932CC;
+    /* Dark Orchid */
+}
+
+
+/* Main Content Area */
+
+.main {
+    margin-left: 220px;
+    /* Offset for sidebar */
+    padding: 20px;
+    background: #f5f6fa;
+    /* Light Gray Background */
+    min-height: 100vh;
+}
+
+
+/* Topbar */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topbar .search input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 250px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.topbar .search input:focus {
+    border-color: #6A0DAD;
+    box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.2);
+    outline: none;
+}
+
+.topbar .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.topbar .user img {
+    border-radius: 50%;
+    /* Circular user image */
+    border: 2px solid #6A0DAD;
+}
+
+
+/* Welcome Section */
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h2 {
+    color: #4B0082;
+    margin-bottom: 5px;
+}
+
+.welcome p {
+    color: #666;
+}
+
+.welcome img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+/* Cards (Finance Info) */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* Allow cards to wrap on smaller screens */
+}
+
+.cards .card {
+    flex: 1;
+    min-width: 200px;
+    /* Minimum width for cards */
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.cards .card:hover {
+    transform: translateY(-5px);
+}
+
+.cards .card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #4B0082;
+}
+
+.cards .card p {
+    color: #666;
+}
+
+
+/* Courses Grid */
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.course-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.course-card .view-btn {
+    background: #4B0082;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.course-card .view-btn:hover {
+    background: #6A0DAD;
+}
+
+
+/* Notice Section */
+
+.notice-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.notice-box {
+    flex: 1;
+    min-width: 280px;
+    /* Minimum width for notice boxes */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.notice-box h4 {
+    margin-bottom: 10px;
+    color: #4B0082;
+    font-size: 18px;
+}
+
+.notice-box p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.notice-box .see-all {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #6A0DAD;
+    font-weight: bold;
+}
+
+.notice-box .see-all:hover {
+    text-decoration: underline;
+}
+
+
+/* Topic Section (for dashboard course details) */
+
+.topic-section {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topic-section h3 {
+    color: #4B0082;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.topic {
+    background: #f0f0f0;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.course-description {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.course-description .course-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #4B0082;
+    margin-bottom: 5px;
+}
+
+
+/* Result, Registration, Drop Sections (Table Styles) */
+
+.result-section {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-section h3 {
+    color: #4B0082;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.result-table th,
+.result-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.result-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.result-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.result-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    /* Ensure padding works */
+}
+
+.status.pass {
+    background-color: #4CAF50;
+    /* Green */
+}
+
+.status.fail {
+    background-color: #f44336;
+    /* Red */
+}
+
+
+/* Registration/Drop Form Specifics */
+
+.result-section form {
+    margin-top: 15px;
+}
+
+.result-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-top: 10px;
+    color: #333;
+}
+
+.result-section ul li {
+    margin-bottom: 5px;
+}
+
+
+/* Payment Button (general style) */
+
+.pay-btn {
+    background: #4B0082;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    /* Align icon and text */
+    align-items: center;
+    gap: 8px;
+}
+
+.pay-btn:hover {
+    background: #6A0DAD;
+    transform: translateY(-2px);
+}
+
+
+/* Payment Popup Form */
+
+.payment-popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black w/ opacity */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+.payment-content {
+    background-color: white;
+    /* White background */
+    margin: auto;
+    /* Center the content */
+    padding: 30px;
+    /* More padding */
+    border: 1px solid #888;
+    /* Border */
+    width: 90%;
+    max-width: 400px;
+    /* Set a max width */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow */
+    position: relative;
+}
+
+.payment-content h2 {
+    color: #4B0082;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.payment-content label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.payment-content input[type="number"],
+.payment-content input[type="text"],
+.payment-content select {
+    width: calc(100% - 20px);
+    /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.payment-content input:focus,
+.payment-content select:focus {
+    border-color: #6A0DAD;
+    box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.2);
+    outline: none;
+}
+
+.payment-content .close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.payment-content .close:hover,
+.payment-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Course Detail Modals */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1001;
+    /* Higher than payment popup */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/ more opacity */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* Center vertically, auto horizontally */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    /* Max width for readability */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    color: #4B0082;
+    font-size: 24px;
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.modal-content ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-top: 15px;
+    color: #555;
+}
+
+.modal-content ul li {
+    margin-bottom: 8px;
+}
+
+.modal .close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px 0;
+    }
+    .sidebar .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sidebar .menu a {
+        padding: 8px 15px;
+        margin: 5px;
+        font-size: 14px;
+    }
+    .sidebar .menu a i {
+        margin-right: 5px;
+    }
+    .sidebar h2 {
+        margin-bottom: 15px;
+    }
+    .sidebar .logout {
+        margin: 10px;
+    }
+    .main {
+        margin-left: 0;
+        padding-top: 10px;
+        /* Adjust for fixed sidebar if needed */
+    }
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .topbar .search input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .topbar .user {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .cards,
+    .notice-section,
+    .courses {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .cards .card,
+    .notice-box,
+    .course-card {
+        min-width: unset;
+        width: 100%;
+    }
+    .result-table {
+        font-size: 14px;
+    }
+    .result-table th,
+    .result-table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar .menu a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    .sidebar .menu a i {
+        font-size: 14px;
+    }
+    .welcome h2 {
+        font-size: 20px;
+    }
+    .welcome p {
+        font-size: 14px;
+    }
+    .cards .card h3 {
+        font-size: 18px;
+    }
+    .course-card h3,
+    .notice-box h4,
+    .result-section h3 {
+        font-size: 16px;
+    }
+    .pay-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .payment-content,
+    .modal-content {
+        padding: 20px;
+    }
+    .payment-content h2,
+    .modal-content h2 {
+        font-size: 20px;
+    }
+}
